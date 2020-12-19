@@ -1,0 +1,28 @@
+spring:
+  datasource1:
+    url: jdbc:h2:mem:clubdb
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+    hikari:
+      minimum-idle: 1
+      maximum-pool-size: 10
+  datasource2:
+    url: jdbc:h2:mem:userdb
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+    hikari:
+      minimum-idle: 1
+      maximum-pool-size: 10
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: create
+    generate-ddl: true
+
+logging:
+  level:
+    org.hibernate.SQL: debug
